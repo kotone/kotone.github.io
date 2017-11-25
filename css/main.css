@@ -437,14 +437,8 @@ td {
 html,
 body {
   height: 100%;
-}
-@media screen and (min-width: 990px) {
-  html,
-  body {
-    background: url("../images/body.jpg") no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
-  }
+  background-size: cover;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAPUlEQVQYV2NU11D6zwACmgUMGzsYGCr9JzBcAwswMDBCJDUZCje2MzBUBDD0X4fKwCT9Jm5gUJ6BKgFSAgAHExBUsdRn2wAAAABJRU5ErkJggg==");
 }
 .container {
   position: relative;
@@ -1103,10 +1097,6 @@ pre .javascript .function {
 .header-inner {
   position: relative;
 }
-#indexMusic .fluid-vids {
-  bottom: -2rem !important;
-  margin-bottom: 0 !important;
-}
 .headband {
   height: 3px;
   background: #222;
@@ -1235,6 +1225,10 @@ pre .javascript .function {
 }
 .use-motion .menu-item {
   opacity: 0;
+}
+#indexMusic .fluid-vids {
+  bottom: -2rem !important;
+  margin-bottom: 0 !important;
 }
 .post-body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
@@ -1844,7 +1838,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffe953;
+  background: #a7ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
