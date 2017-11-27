@@ -438,6 +438,7 @@ html,
 body {
   height: 100%;
   background-size: cover;
+  background-attachment: fixed;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAPUlEQVQYV2NU11D6zwACmgUMGzsYGCr9JzBcAwswMDBCJDUZCje2MzBUBDD0X4fKwCT9Jm5gUJ6BKgFSAgAHExBUsdRn2wAAAABJRU5ErkJggg==");
 }
 .container {
@@ -1838,7 +1839,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #a7ffff;
+  background: #f1e9ff;
 }
 .links-of-blogroll {
   font-size: 13px;
