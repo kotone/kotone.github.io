@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="python," />
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="配置清单 部署流程 设置Menu 修改背景 添加网易云音乐">
-<meta name="keywords" content="hexo">
+<meta name="description" content="Python 学习笔记之——解析与过滤  额，偷点懒，排版直接用IDE显示了。。。。">
+<meta name="keywords" content="python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo + Next 配置与美化">
-<meta property="og:url" content="http://yoursite.com/2017/11/23/hexo个人配置/index.html">
+<meta property="og:title" content="Python——解析与过滤">
+<meta property="og:url" content="http://yoursite.com/2017/12/26/python-解析过滤/index.html">
 <meta property="og:site_name" content="RhoAias">
-<meta property="og:description" content="配置清单 部署流程 设置Menu 修改背景 添加网易云音乐">
+<meta property="og:description" content="Python 学习笔记之——解析与过滤  额，偷点懒，排版直接用IDE显示了。。。。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-25T09:23:06.296Z">
+<meta property="og:updated_time" content="2017-12-26T08:27:01.569Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo + Next 配置与美化">
-<meta name="twitter:description" content="配置清单 部署流程 设置Menu 修改背景 添加网易云音乐">
+<meta name="twitter:title" content="Python——解析与过滤">
+<meta name="twitter:description" content="Python 学习笔记之——解析与过滤  额，偷点懒，排版直接用IDE显示了。。。。">
 
 
 
@@ -127,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/11/23/hexo个人配置/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/26/python-解析过滤/"/>
 
 
 
 
 
-  <title>Hexo + Next 配置与美化 | RhoAias</title>
+  <title>Python——解析与过滤 | RhoAias</title>
   
 
 
@@ -296,7 +296,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/23/hexo个人配置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/26/python-解析过滤/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kotone">
@@ -313,7 +313,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo + Next 配置与美化</h1>
+          <h1 class="post-title" itemprop="name headline">Python——解析与过滤</h1>
         
 
         <div class="post-meta">
@@ -325,8 +325,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-23T09:53:41+08:00">
-                2017-11-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-26T15:25:08+08:00">
+                2017-12-26
               </time>
             
 
@@ -348,8 +348,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/学习笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">学习笔记</span>
                   </a>
                 </span>
 
@@ -374,10 +374,6 @@
         
         <!--网易-->
         
-        <div id="indexMusic">
-          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=401540&auto=1&height=66"></iframe>
-        </div>
-        
         
       </header>
     
@@ -391,43 +387,11 @@
       
 
       
-        <h3 id="配置清单"><a href="#配置清单" class="headerlink" title="配置清单"></a>配置清单</h3><ol>
-<li>部署流程</li>
-<li>设置Menu</li>
-<li>修改背景</li>
-<li>添加网易云音乐</li>
-</ol>
-<a id="more"></a>
-<h3 id="部署流程"><a href="#部署流程" class="headerlink" title="部署流程"></a>部署流程</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-<h3 id="设置Menu"><a href="#设置Menu" class="headerlink" title="设置Menu"></a>设置Menu</h3><ol>
-<li><p>首先创建一个目标页面（举例创建一个tags页面）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &quot;tags&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>根目录source 就会多出一个tags文件夹，接下来修改tags文件夹下的index.md</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type: &quot;tags&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改主题下的_config.yml 的menu 选项，增加tags 选项 || 后面是menu 的 icon</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  Home: / || home</span><br><span class="line">  tags: /tags || tags</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改主题下的 languages/zh-Hans.yml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: 首页</span><br><span class="line">  archives: 归档</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签 //改成自己对应的名字</span><br><span class="line">  about: 关于</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="修改背景"><a href="#修改背景" class="headerlink" title="修改背景"></a>修改背景</h3><p>找到主题下的 <strong>next\source\css_common\outline\outline.styl</strong> 修改body的样式就可以了</p>
-<h3 id="添加网易云音乐"><a href="#添加网易云音乐" class="headerlink" title="添加网易云音乐"></a>添加网易云音乐</h3><p>分两种添加，一种在个人信息栏，一种是在文章顶部添加</p>
-<ul>
-<li><p><strong>个人信息栏添加</strong><br>找到文件 <strong>next\layout_macro\sidebar.swig</strong>  找到下面的字段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">include &apos;../_custom/sidebar.swig&apos;</span><br><span class="line">在这里添加上 网易云的外链</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>文章顶部添加</strong><br>和上面的方法一样，都是添加网易云外链，只不过，修改了下模板。可以自定义音乐，以及是否添加音乐<br>找到文件<strong>next\layout_macro\post.swig</strong> 在 <code>&lt;/header&gt;</code>上方添加下面的代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if post.songid %&#125;</span><br><span class="line">    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=&#123;&#123; post.songid &#125;&#125;&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<p>  然后在文章顶部添加 字段 sondid ,值为歌曲ID</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: </span><br><span class="line">tags: </span><br><span class="line">categories: </span><br><span class="line">songid: //歌曲ID</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>1.如果没有sondid 字段或者 sondid 为空则不会出现音乐。<br>2.如果要让首页展示的时候不出现音乐，文章打开后出现音乐，可以在 <code>post.songid</code> 后面添加 <code>and (not is_index)</code> </p>
+        <h3 id="Python-学习笔记之——解析与过滤"><a href="#Python-学习笔记之——解析与过滤" class="headerlink" title="Python 学习笔记之——解析与过滤"></a>Python 学习笔记之——解析与过滤</h3><blockquote>
+<p> 额，偷点懒，排版直接用IDE显示了。。。。</p>
 </blockquote>
-</li>
-</ul>
+<a id="more"></a>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> timeit</span><br><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line"></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"><span class="comment">#         列表解析 []</span></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成 -10~10 的10 个 随机数</span></span><br><span class="line">data = [randint(<span class="number">-10</span>,<span class="number">10</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>)]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 过滤负数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### 1.ilter(function or None, iterable)--&gt; filter object</span></span><br><span class="line">a = list( filter(<span class="keyword">lambda</span> x:x&gt;= <span class="number">0</span>,data) )</span><br><span class="line"></span><br><span class="line"><span class="comment">### 2.列表解析</span></span><br><span class="line"></span><br><span class="line">b = [x <span class="keyword">for</span> x <span class="keyword">in</span> data <span class="keyword">if</span> x&gt;=<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment">### 比较两种方法的效率</span></span><br><span class="line">t1 =timeit.Timer(</span><br><span class="line">    <span class="string">'list( filter(lambda x:x&gt;= 0,data) )'</span>,</span><br><span class="line">    setup=<span class="string">"from __main__ import data"</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">t2 =timeit.Timer(</span><br><span class="line">    <span class="string">'[x for x in data if x&gt;=0]'</span>,</span><br><span class="line">    setup=<span class="string">"from __main__ import data"</span></span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">print(t1.timeit())</span><br><span class="line">print(t2.timeit())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"><span class="comment">#         字典解析 &#123;k:v&#125;</span></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 随机生成一个 人名: 分数 的字典 </span></span><br><span class="line">d = &#123;x:randint(<span class="number">60</span>,<span class="number">100</span>) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">20</span>)&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">## 过滤出分数大于90的</span></span><br><span class="line"></span><br><span class="line"><span class="comment">### 1.字典解析</span></span><br><span class="line"></span><br><span class="line">D = &#123;key:value <span class="keyword">for</span> key,value <span class="keyword">in</span> d.items() <span class="keyword">if</span> value&gt;<span class="number">90</span> &#125;</span><br><span class="line"></span><br><span class="line">print(D)</span><br><span class="line"></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"><span class="comment">#         集合解析 &#123;&#125;</span></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"></span><br><span class="line">s = set(data)</span><br><span class="line"></span><br><span class="line"><span class="comment">## 过滤能被 3 整除的</span></span><br><span class="line"></span><br><span class="line">S = &#123;x <span class="keyword">for</span> x <span class="keyword">in</span> s <span class="keyword">if</span> x % <span class="number">3</span> == <span class="number">0</span>&#125;</span><br><span class="line"></span><br><span class="line">print(S)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"><span class="comment">#         字典代替 switch</span></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line">day = <span class="number">0</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'this is test'</span>)</span><br><span class="line">    </span><br><span class="line">switcher = &#123;</span><br><span class="line">    <span class="number">0</span> : <span class="string">'Sunday'</span>,</span><br><span class="line">    <span class="number">1</span> : <span class="string">'Monday'</span>,</span><br><span class="line">    <span class="number">2</span> : <span class="string">'Tuesday'</span>,</span><br><span class="line">    <span class="number">3</span> : test</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">switcher.get(day,<span class="string">'none'</span>)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -447,7 +411,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/python/" rel="tag"># python</a>
           
         </div>
       
@@ -460,15 +424,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/11/23/hexo个人配置/" rel="next" title="Hexo + Next 配置与美化">
+                <i class="fa fa-chevron-left"></i> Hexo + Next 配置与美化
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/26/python-解析过滤/" rel="prev" title="Python——解析与过滤">
-                Python——解析与过滤 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -614,7 +578,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置清单"><span class="nav-number">1.</span> <span class="nav-text">配置清单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署流程"><span class="nav-number">2.</span> <span class="nav-text">部署流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置Menu"><span class="nav-number">3.</span> <span class="nav-text">设置Menu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改背景"><span class="nav-number">4.</span> <span class="nav-text">修改背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加网易云音乐"><span class="nav-number">5.</span> <span class="nav-text">添加网易云音乐</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-学习笔记之——解析与过滤"><span class="nav-number">1.</span> <span class="nav-text">Python 学习笔记之——解析与过滤</span></a></li></ol></div>
             
 
             <!--文章目录-->
