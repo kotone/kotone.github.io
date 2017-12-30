@@ -86,19 +86,19 @@
 
 
 
-<meta name="description" content="Python3学习笔记之——枚举">
+<meta name="description" content="Python3 枚举">
 <meta name="keywords" content="python3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python3——枚举">
 <meta property="og:url" content="http://yoursite.com/2017/12/27/python—枚举/index.html">
 <meta property="og:site_name" content="RhoAias">
-<meta property="og:description" content="Python3学习笔记之——枚举">
+<meta property="og:description" content="Python3 枚举">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://images.pexels.com/photos/7919/pexels-photo.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
-<meta property="og:updated_time" content="2017-12-30T01:22:47.013Z">
+<meta property="og:updated_time" content="2017-12-30T08:05:11.117Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python3——枚举">
-<meta name="twitter:description" content="Python3学习笔记之——枚举">
+<meta name="twitter:description" content="Python3 枚举">
 <meta name="twitter:image" content="https://images.pexels.com/photos/7919/pexels-photo.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
 
 
@@ -389,7 +389,7 @@
       
 
       
-        <h3 id="Python3学习笔记之——枚举"><a href="#Python3学习笔记之——枚举" class="headerlink" title="Python3学习笔记之——枚举"></a>Python3学习笔记之——枚举</h3><p><img src="https://images.pexels.com/photos/7919/pexels-photo.jpg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb" alt=""></p>
+        <h3 id="Python3-枚举"><a href="#Python3-枚举" class="headerlink" title="Python3 枚举"></a>Python3 枚举</h3><p><img src="https://images.pexels.com/photos/7919/pexels-photo.jpg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb" alt=""></p>
 <a id="more"></a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> Enum, unique</span><br><span class="line"></span><br><span class="line">student = (<span class="string">'admin'</span>, <span class="number">18</span>, <span class="string">'男'</span>, <span class="string">'admin@gmail.com'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 下标从 1 开始</span></span><br><span class="line">Student = Enum(<span class="string">'Student'</span>, (<span class="string">'name'</span>, <span class="string">'age'</span>, <span class="string">'sex'</span>, <span class="string">'email'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取学生的姓名</span></span><br><span class="line">student[Student.name.value - <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 自定义下标 0 开始，unique 检测重复</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@unique</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student_</span><span class="params">(Enum)</span>:</span></span><br><span class="line">    (name, age, sex, email) = range(<span class="number">0</span>, <span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># print(Student_.name)</span></span><br><span class="line"><span class="comment"># print(Student_.name.value)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># print(Student_(0))</span></span><br><span class="line"><span class="comment"># print(Student_(0).value)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取学生的姓名</span></span><br><span class="line">student[Student_.name.value]</span><br></pre></td></tr></table></figure>
       
@@ -433,7 +433,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/28/有序字典/" rel="prev" title="Python3——有序字典">
+              <a href="/2017/12/28/python—有序字典/" rel="prev" title="Python3——有序字典">
                 Python3——有序字典 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -518,7 +518,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -581,7 +581,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python3学习笔记之——枚举"><span class="nav-number">1.</span> <span class="nav-text">Python3学习笔记之——枚举</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python3-枚举"><span class="nav-number">1.</span> <span class="nav-text">Python3 枚举</span></a></li></ol></div>
             
 
             <!--文章目录-->

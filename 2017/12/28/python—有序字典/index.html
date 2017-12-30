@@ -86,19 +86,19 @@
 
 
 
-<meta name="description" content="Python3学习笔记之——有序字典">
+<meta name="description" content="python3 有序字典">
 <meta name="keywords" content="python3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python3——有序字典">
-<meta property="og:url" content="http://yoursite.com/2017/12/28/有序字典/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/12/28/python—有序字典/index.html">
 <meta property="og:site_name" content="RhoAias">
-<meta property="og:description" content="Python3学习笔记之——有序字典">
+<meta property="og:description" content="python3 有序字典">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://images.pexels.com/photos/748777/pexels-photo-748777.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
-<meta property="og:updated_time" content="2017-12-30T01:22:33.329Z">
+<meta property="og:updated_time" content="2017-12-30T08:05:07.323Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python3——有序字典">
-<meta name="twitter:description" content="Python3学习笔记之——有序字典">
+<meta name="twitter:description" content="python3 有序字典">
 <meta name="twitter:image" content="https://images.pexels.com/photos/748777/pexels-photo-748777.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/28/有序字典/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/28/python—有序字典/"/>
 
 
 
@@ -298,7 +298,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/28/有序字典/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/28/python—有序字典/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kotone">
@@ -389,7 +389,7 @@
       
 
       
-        <h3 id="Python3学习笔记之——有序字典"><a href="#Python3学习笔记之——有序字典" class="headerlink" title="Python3学习笔记之——有序字典"></a>Python3学习笔记之——有序字典</h3><p><img src="https://images.pexels.com/photos/748777/pexels-photo-748777.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb" alt=""></p>
+        <h3 id="python3-有序字典"><a href="#python3-有序字典" class="headerlink" title="python3 有序字典"></a>python3 有序字典</h3><p><img src="https://images.pexels.com/photos/748777/pexels-photo-748777.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb" alt=""></p>
 <a id="more"></a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> OrderedDict</span><br><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line"><span class="keyword">from</span> time <span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个有序字典</span></span><br><span class="line">d = OrderedDict()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">players = list(<span class="string">'ABCDEF'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">start = time()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(players)):</span><br><span class="line">    input()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 随机选取一名，记录下来，并从列表移除</span></span><br><span class="line">    p = players.pop(randint(<span class="number">0</span>, len(players) - <span class="number">1</span>))</span><br><span class="line">    end = time()</span><br><span class="line">    print(i + <span class="number">1</span>, p, end - start)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 按照顺序存储在 有序字典 中</span></span><br><span class="line">    d[p] = (i + <span class="number">1</span>, end - start)</span><br><span class="line"></span><br><span class="line">print(<span class="string">'------------------结果----------------------'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> d:</span><br><span class="line">    print(i, d[i])</span><br></pre></td></tr></table></figure>
 
@@ -434,7 +434,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/12/29/迭代多个对象/" rel="prev" title="Python3——迭代多个对象">
+              <a href="/2017/12/29/python—迭代多个对象/" rel="prev" title="Python3——迭代多个对象">
                 Python3——迭代多个对象 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -519,7 +519,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -582,7 +582,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python3学习笔记之——有序字典"><span class="nav-number">1.</span> <span class="nav-text">Python3学习笔记之——有序字典</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#python3-有序字典"><span class="nav-number">1.</span> <span class="nav-text">python3 有序字典</span></a></li></ol></div>
             
 
             <!--文章目录-->
