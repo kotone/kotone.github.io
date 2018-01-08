@@ -86,19 +86,19 @@
 
 
 
-<meta name="description" content="Python3——序列元素排序统计">
+<meta name="description" content="Python3—序列元素排序统计">
 <meta name="keywords" content="python3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python3——序列元素排序统计">
+<meta property="og:title" content="Python3—序列元素排序统计">
 <meta property="og:url" content="http://yoursite.com/2018/01/05/python—序列元素排序统计/index.html">
 <meta property="og:site_name" content="Kotone">
-<meta property="og:description" content="Python3——序列元素排序统计">
+<meta property="og:description" content="Python3—序列元素排序统计">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://images.pexels.com/photos/770318/pexels-photo-770318.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
-<meta property="og:updated_time" content="2018-01-05T09:24:55.071Z">
+<meta property="og:updated_time" content="2018-01-08T06:49:50.252Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python3——序列元素排序统计">
-<meta name="twitter:description" content="Python3——序列元素排序统计">
+<meta name="twitter:title" content="Python3—序列元素排序统计">
+<meta name="twitter:description" content="Python3—序列元素排序统计">
 <meta name="twitter:image" content="https://images.pexels.com/photos/770318/pexels-photo-770318.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
 
 
@@ -135,7 +135,7 @@
 
 
 
-  <title>Python3——序列元素排序统计 | Kotone</title>
+  <title>Python3—序列元素排序统计 | Kotone</title>
   
 
 
@@ -325,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Python3——序列元素排序统计</h1>
+          <h1 class="post-title" itemprop="name headline">Python3—序列元素排序统计</h1>
         
 
         <div class="post-meta">
@@ -399,7 +399,7 @@
       
 
       
-        <h3 id="Python3——序列元素排序统计"><a href="#Python3——序列元素排序统计" class="headerlink" title="Python3——序列元素排序统计"></a>Python3——序列元素排序统计</h3><p><img src="https://images.pexels.com/photos/770318/pexels-photo-770318.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb" alt=""><br><a id="more"></a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成一个 元素在0-20之间 的 30位的列表</span></span><br><span class="line">data = [randint(<span class="number">0</span>,<span class="number">20</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">30</span>)]</span><br><span class="line"></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"><span class="comment">#        排序 sorted</span></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"><span class="comment"># 创建一个新的 字典 dict.fromkeys(键,初始值)</span></span><br><span class="line">c = dict.fromkeys(data,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 统计相同元素出现的次数</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> data:</span><br><span class="line">    c[x] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对统计结果排序 key/value =&gt; 0/1  返回一个列表</span></span><br><span class="line">C = sorted(c.items(),key=<span class="keyword">lambda</span> item:item[<span class="number">1</span>],reverse=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"><span class="comment">#        统计 Counter</span></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"></span><br><span class="line">c2 = Counter(data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 统计出现频率 最高的 3 个元素</span></span><br><span class="line">c2.most_common(<span class="number">3</span>)</span><br></pre></td></tr></table></figure></p>
+        <h3 id="Python3—序列元素排序统计"><a href="#Python3—序列元素排序统计" class="headerlink" title="Python3—序列元素排序统计"></a>Python3—序列元素排序统计</h3><p><img src="https://images.pexels.com/photos/770318/pexels-photo-770318.jpeg?w=940&amp;h=650&amp;auto=compress&amp;cs=tinysrgb" alt=""><br><a id="more"></a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成一个 元素在0-20之间 的 30位的列表</span></span><br><span class="line">data = [randint(<span class="number">0</span>,<span class="number">20</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">30</span>)]</span><br><span class="line"></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"><span class="comment">#        排序 sorted</span></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"><span class="comment"># 创建一个新的 字典 dict.fromkeys(键,初始值)</span></span><br><span class="line">c = dict.fromkeys(data,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 统计相同元素出现的次数</span></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> data:</span><br><span class="line">    c[x] += <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 对统计结果排序 key/value =&gt; 0/1  返回一个列表</span></span><br><span class="line">C = sorted(c.items(),key=<span class="keyword">lambda</span> item:item[<span class="number">1</span>],reverse=<span class="keyword">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"><span class="comment">#        统计 Counter</span></span><br><span class="line"><span class="comment"># --------------------------------------------</span></span><br><span class="line"></span><br><span class="line">c2 = Counter(data)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 统计出现频率 最高的 3 个元素</span></span><br><span class="line">c2.most_common(<span class="number">3</span>)</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -590,7 +590,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python3——序列元素排序统计"><span class="nav-number">1.</span> <span class="nav-text">Python3——序列元素排序统计</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python3—序列元素排序统计"><span class="nav-number">1.</span> <span class="nav-text">Python3—序列元素排序统计</span></a></li></ol></div>
             
 
             <!--文章目录-->
