@@ -85,6 +85,6 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-    type: git
-    repo: https://github.com/kotone/kotone.github.io.git
-    branch: master
+  type: git
+  repo: https://github.com/kotone/kotone.github.io.git
+  branch: master
