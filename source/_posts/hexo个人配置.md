@@ -3,9 +3,12 @@ title: Hexo + Next 配置与美化
 tags: hexo
 categories: hexo
 songid: [401540,1]
+photos: 
 ---
 
-### 个人配置
+### 前言
+
+折腾了一段时间的主题，被各种炫酷的主题搞得忘记了博客的初心。最后还是回归Next怀抱，next的配置相对而言非常齐全，下面的文章我只写了些我自己的一些配置需要，其他第三方服务可以参考[next官网](http://theme-next.iissnan.com/third-party-services.html)
 
 
 <!-- more -->
