@@ -16,6 +16,12 @@ timezone:
 live2d:
   model: z16  # z16 hibiki shizuku miku haruto 
   bottom: -20
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite.com
