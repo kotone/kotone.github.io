@@ -15,16 +15,14 @@ Python3学习笔记-实现正反向迭代
 反向: 4.0 -> 3.8 -> 3.6 ... ->3.0  
 
 <!-- more -->
-#### 前言
 
+> 正向(使用迭代器 `__iter__`)  反向(使用迭代器 `__reversed__`)
 
 ```python
-# 正向(使用迭代器 __iter__)  反向(使用迭代器 __reversed__)
 
 class FloatRange():
     def __init__(self, start, end, step=0.1):
-
-        self.start = start
+        self.start = start 
         self.end = end
         self.step = step
 
@@ -41,13 +39,14 @@ class FloatRange():
         while t >= self.start:
             yield t
             t -= self.step
-
-
-# 正向实例 调用 __iter__
+```
+#### 正向实例 调用 `__iter__`
+```python
 for x in FloatRange(1.0, 4.0, 0.5):
     pass
-
-# 反向实例 reversed() 调用__reversed__
+```
+#### 反向实例 `reversed()` 调用`__reversed__`
+```python
 for x in reversed(FloatRange(1.0, 4.0, 0.5)):
     pass
 ```
