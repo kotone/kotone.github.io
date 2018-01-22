@@ -13,13 +13,11 @@ Python3学习笔记-实现正反向迭代
 例如: FloatRange(3.0,4.0,0.2) 可产生:
 正向: 3.0 -> 3.2 -> 3.4 ... ->4.0
 反向: 4.0 -> 3.8 -> 3.6 ... ->3.0  
-
 <!-- more -->
 
 > 正向(使用迭代器 `__iter__`)  反向(使用迭代器 `__reversed__`)
 
 ```python
-
 class FloatRange():
     def __init__(self, start, end, step=0.1):
         self.start = start 

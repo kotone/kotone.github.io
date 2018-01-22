@@ -2,7 +2,7 @@
 title: Hexo + Next 配置与美化
 tags: hexo
 categories: hexo
-songid: [401540,1]
+songid: 401540
 photos: 
 ---
 
