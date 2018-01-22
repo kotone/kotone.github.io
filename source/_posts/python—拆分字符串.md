@@ -1,26 +1,20 @@
 ---
-title: Python3—拆分字符串
+title: 拆分字符串
 date: 2018-01-04 15:22:29
 categories: Python3
-tags: python3
+tags: python3笔记
 ---
 
-### Python3—拆分字符串
-![](https://images.pexels.com/photos/768472/pexels-photo-768472.jpeg?w=940&h=650&auto=compress&cs=tinysrgb)
+{% note info %}
+Python3学习笔记-拆分字符串
+{% endnote %}
 
-<!-- more -->
 > 把 某个 字符串依据分隔符 拆分不同的字段,该字符串含多种不同的分隔符，例如:
-> `s = 'ab;cd|efg|hi,jklmn\topq;rst,uvw\txyz'`
-> `,;|\t` 都是分隔符
+`s = 'ab;cd|efg|hi,jklmn\topq;rst,uvw\txyz'`
+`,;|\t` 都是分隔符
 
-
+#### 方法一 使用str.split 依次过滤
 ```python
-s = 'ab;cd|efg|hi,,jklmn\topq;rst,uvw\txyz'
-
-# --------------------------------------------
-#          方法一 使用str.split 依次过滤
-# --------------------------------------------
-
 def my_split(s, ds):
     res = [s]
     for d in ds:
@@ -35,13 +29,14 @@ def my_split(s, ds):
 
 my_split(s, ',;|\t')
 
-# --------------------------------------------
-#          方法二 使用re.split 一次性拆分字符串
-# --------------------------------------------
+```
+#### 方法二 使用re.split 一次性拆分字符串
 
+```python
 # re.split(pattern, string, maxsplit=0, flags=0)
 import re
 
 res = re.split('[,;|\t]+',s)
 
 ```
+
