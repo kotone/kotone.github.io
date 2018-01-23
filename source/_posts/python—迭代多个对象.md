@@ -1,18 +1,21 @@
 ---
-title: Python3—迭代多个对象
+title: 迭代多个对象
 date: 2017-12-29 14:44:33
 categories: Python3
-tags: python3
+tags: python3笔记
 ---
-### 如何在一个for 语句中迭代多个可迭代对象
-![](https://images.pexels.com/photos/126590/pexels-photo-126590.jpeg?w=940&h=650&auto=compress&cs=tinysrgb)
+{% note info %}
+Python3学习笔记-迭代多个对象
+{% endnote %} 
+
+
+- 情景一(并行)：某班学生期末考试成绩语文，数学，英语分别存储在3个列表中，同时迭代 3 个列表。计算每个学生的总分
+
+- 情景二(串行)：某年级有 4 个班，某次考试每班英语成绩分别存储在4 个列表中，依次迭代每个列表，统计全年级成绩高于 90 分的人数
+
 
 <!-- more -->
-
-#### 并行 
-
-> 某班学生期末考试成绩语文，数学，英语分别存储在3个列表中，同时迭代 3 个列表。计算每个学生的总分   
-
+#### 情景一(并行)
 ```python
 from random import randint
 
@@ -29,9 +32,7 @@ for c, m, e in zip(chinese, math, english):
     total.append(c + m + e)
 
 ```
-#### 串行 
-
-> 某年级有 4 个班，某次考试每班英语成绩分别存储在4 个列表中，依次迭代每个列表，统计全年级成绩高于 90 分的人数
+#### 情景二(串行) 
 
 ```python
 from itertools import chain

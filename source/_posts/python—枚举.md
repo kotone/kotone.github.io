@@ -1,5 +1,5 @@
 ---
-title: Python枚举
+title: Python3枚举
 date: 2017-12-27 14:09:38
 categories: Python3
 tags: python3笔记

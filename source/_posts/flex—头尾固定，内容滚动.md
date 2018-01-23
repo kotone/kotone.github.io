@@ -1,5 +1,5 @@
 ---
-title: 利用flex实现头尾固定，内容滚动
+title: 实现头尾固定，内容滚动
 date: 2018-01-05 10:58:37
 categories: css
 tags: [css,flex]
