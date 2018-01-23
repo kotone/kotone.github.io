@@ -55,3 +55,6 @@ Student.sex
 获取 student 的 age :
 1. 索引访问：student[1] --> 18
 2. 枚举： student[Student.age.value] --> 18
+
+#### 写在最后的话
+{% note primary %}如果您觉得文章有什么地方写错了，哪里写得不好，或者有什么建议，期待您的指点{% endnote %}

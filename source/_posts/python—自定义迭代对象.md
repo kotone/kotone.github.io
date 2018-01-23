@@ -9,7 +9,7 @@ songid:
 Python3学习笔记-自定义可迭代对象  
 {% endnote %} 
 
-Question1:
+#### Question1
 实现一个连续浮点数发生器FloatRange(和range类似),根据给定范围(start,end)和步进值(step)产生一系列连续浮点数,例如: FloatRange(3.0,4.0,0.2) 可产生:
 正向: 3.0 -> 3.2 -> 3.4 ... ->4.0
 反向: 4.0 -> 3.8 -> 3.6 ... ->3.0  
@@ -49,7 +49,8 @@ for x in reversed(FloatRange(1.0, 4.0, 0.5)):
     pass
 ```
 
-Question2: 实现一个可迭代对象的类，它能迭代出给定范围内的所有质数
+#### Question2
+实现一个可迭代对象的类，它能迭代出给定范围内的所有质数
 ```python
 class PrimeNumbers:
     def __init__(self,start,end):
@@ -82,3 +83,6 @@ for x in PrimeNumbers(1,100):
     print(x)
 
 ```
+
+#### 写在最后的话
+{% note primary %}如果您觉得文章有什么地方写错了，哪里写得不好，或者有什么建议，期待您的指点{% endnote %}
