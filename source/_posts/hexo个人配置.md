@@ -1,9 +1,11 @@
 ---
 title: Hexo + Next 配置与美化
+date: 2017-12-25 10:58:37
 tags: hexo
 categories: hexo
 songid: 401540
 photos: 
+is_update: true
 ---
 
 #### 前言

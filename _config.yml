@@ -12,12 +12,6 @@ author: Osukuroru
 language: zh-Hans
 timezone:
 
-# live2d
-live2d:
-  model: z16  # z16 hibiki shizuku miku haruto 
-  bottom: -20
-# 文章更新
-display_updated: true
 # 搜索
 search:
   path: search.xml
