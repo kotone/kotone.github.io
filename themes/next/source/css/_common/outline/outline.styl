@@ -1,0 +1,66 @@
+//
+// Layout
+// Note: Must name this file "outline" instead of "layout"
+//       Or Hexo will use it as template layout.
+// =================================================
+
+// 修改背景图片
+html, body { 
+  height: 100%;
+  //background-size: cover;
+  background-attachment:fixed;
+  //background-repeat:no-repeat;
+
+  background-image:url('http://ozweypnnh.bkt.clouddn.com/blog-blue-cloud.gif')
+
+  //background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAADCAYAAABfwxXFAAAAPUlEQVQYV2NU11D6zwACmgUMGzsYGCr9JzBcAwswMDBCJDUZCje2MzBUBDD0X4fKwCT9Jm5gUJ6BKgFSAgAHExBUsdRn2wAAAABJRU5ErkJggg==");
+}
+.container {
+  position: relative;
+  min-height: 100%;
+}
+
+
+// Header Section
+// --------------------------------------------------
+.header-inner {
+  margin: 0 auto;
+  padding: 100px 0 70px;
+  width: $content-desktop;
+
+  +desktop-large() {
+    .container & { width: $content-desktop-large; }
+  }
+}
+
+// Main Section
+// --------------------------------------------------
+.main { padding-bottom: $footer-height + $gap-between-main-and-footer; }
+.main-inner {
+  margin: 0 auto;
+  width: $content-desktop;
+
+  +desktop-large() {
+    .container & { width: $content-desktop-large; }
+  }
+}
+
+
+// Footer Section
+// --------------------------------------------------
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: $footer-height;
+}
+.footer-inner {
+  box-sizing: border-box;
+  margin: 20px auto;
+  width: $content-desktop;
+
+  +desktop-large() {
+    .container & { width: $content-desktop-large; }
+  }
+}
