@@ -14,7 +14,7 @@ install:
 
 script:
   - hexo clean
-  - hexo d -g
+  - hexo g
 
 after_script:
   - cd ./public
