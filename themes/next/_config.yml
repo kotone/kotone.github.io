@@ -354,7 +354,7 @@ han: false
 
 # Disqus
 disqus:
-  enable: true
+  enable: false
   shortname: Osukuroru
   count: true
 
