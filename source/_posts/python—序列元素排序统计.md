@@ -46,5 +46,4 @@ c2 = Counter(data)
 c2.most_common(3)
 
 ```
-#### 写在最后的话
-{% note primary %}如果您觉得文章有什么地方写错了，哪里写得不好，或者有什么建议，期待您的指点{% endnote %}
+

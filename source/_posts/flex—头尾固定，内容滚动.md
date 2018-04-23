@@ -28,5 +28,3 @@ html,body{width:100%;height:100%}
 .content{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;}
 
 ```
-#### 写在最后的话
-{% note primary %}如果您觉得文章有什么地方写错了，哪里写得不好，或者有什么建议，期待您的指点{% endnote %}
