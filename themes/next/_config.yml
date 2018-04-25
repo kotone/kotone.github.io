@@ -100,6 +100,12 @@ menu_icons:
   enable: true
 
 
+# songid 首页歌曲 type 0 表示 歌曲集,type 2 为单曲,type需与id统一
+song: 
+  id: 554245086
+  type: 2
+
+
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
@@ -148,7 +154,7 @@ links_layout: block
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-avatar: https://wx.qlogo.cn/mmopen/vi_32/uZWYsYKGjISG0LT2ic4Lib9OTgtJC3xLZspeVJ16ZM76xzaGqCJRWVbLRox58Wk8RgPw9lhgVHQlh4c973JANNow/0
+avatar: /images/avatar.jpg
 
 # Table Of Contents in the Sidebar
 toc:
@@ -701,7 +707,7 @@ canvas_lines: false #true false
 canvas_sphere: false
 
 
-#canvas_bubble
+#canvas_bubble 冒泡canvas,不兼容移动端
 canvas_bubble: false
 
 # Only fit scheme Pisces
