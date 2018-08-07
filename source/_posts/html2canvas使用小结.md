@@ -42,9 +42,6 @@ photos:
 ```
 这样生成的canvas是一个整体向上、向左移动50%（?）只显示了容器的右下部分
 
-#### 3. 多个层级 position 定位问题（项目中出现过，现在不知道怎么复现了 - -）
-占个坑，复现了再补充
-
 ### 一些小技巧？
 #### 1.要转换成canvas容器不显示在页面
 设置容器的`opacity:0`;  设置成`visibility: hidden;`以及`display:none`会生成空白的canvas
@@ -59,4 +56,4 @@ html2canvas(document.querySelector('#to-canvas'),{
 用的最新版的,发现生成的canvas是根据设备dpr变化的。保证了canvas的高清。网上很多是通过创建一个自定义canvas。添加一个`scale`配置。
 
 #### 4.`transform.js` 和 `html2canvas`
-如果容器内部的img元素使用了`transform.js`,容器上不要设置`border-radius`否则生成的结果该元素也会带有圆角。(最近做一个定制手机壳项目发现的)
+如果容器内部的img元素使用了`transform.js`,这个元素需要设置定位`top,left`值，否则容器上设置的`border-radius`,会影响到该元素，使其也带有圆角属性。
