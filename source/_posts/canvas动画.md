@@ -6,7 +6,7 @@ date: 2018-08-05
 categories: 前端
 tags: [canvas,python3]
 songid: [34468461]
-photos: ['http://ozweypnnh.bkt.clouddn.com/nico.gif']
+photos: 
 ---
 ps: 歌曲有毒
 这周实现一个和 `canvas` 动画，目标就是给出一个 `GIF`,然后在页面使用 `canvas` 绘制出来。
