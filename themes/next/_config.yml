@@ -102,7 +102,7 @@ menu_icons:
 
 # songid 首页歌曲 type 0 表示 歌曲集,type 2 为单曲,type需与id统一
 song: 
-  id: 41658021
+  id: 37169617
   type: 2
 
 
