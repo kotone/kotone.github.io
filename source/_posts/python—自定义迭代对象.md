@@ -1,8 +1,8 @@
 ---
 title: 自定义可迭代对象
 date: 2018-01-08 14:36:20
-categories: Python3
-tags: python3笔记
+categories: python3
+tags: python3
 songid:
 ---
 {% note info %} 

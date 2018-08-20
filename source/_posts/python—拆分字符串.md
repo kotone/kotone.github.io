@@ -1,8 +1,8 @@
 ---
 title: 拆分字符串
 date: 2018-01-04 15:22:29
-categories: Python3
-tags: python3笔记
+categories: python3
+tags: python3
 ---
 
 {% note info %}

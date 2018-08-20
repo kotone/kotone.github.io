@@ -1,8 +1,8 @@
 ---
 title: 迭代多个对象
 date: 2017-12-29 14:44:33
-categories: Python3
-tags: python3笔记
+categories: python3
+tags: python3
 ---
 {% note info %}
 Python3学习笔记-迭代多个对象

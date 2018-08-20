@@ -1,8 +1,8 @@
 ---
 title: 快速找到多个字典中的公共键
 date: 2018-01-02 16:11:21
-categories: Python3
-tags: python3笔记
+tags: python3
+categories: python3
 ---
 {% note info %} 
 Python3学习笔记-快速找到多个字典中的公共键

@@ -1,8 +1,8 @@
 ---
 title: 对迭代器进行切片
 date: 2018-01-03 14:27:24
-categories: Python3
-tags: python3笔记
+categories: python3
+tags: python3
 ---
 {% note info %} 
 Python3学习笔记-对迭代器进行切片  

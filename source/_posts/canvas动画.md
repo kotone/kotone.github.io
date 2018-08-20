@@ -3,7 +3,7 @@ title: canvas绘制GIF
 comments: false
 is_update: false
 date: 2018-08-05
-categories: 前端
+categories: canvas
 tags: [canvas,python3]
 songid: [34468461]
 photos: 

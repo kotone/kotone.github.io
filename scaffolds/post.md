@@ -9,6 +9,10 @@ is_update: false # 是否显示更新时间
 photos:  # 封面图片
 #    - 
 ---
+
+<!-- tags: 文章主题 -->
+<!-- categories: canvas python3 css js插件  笔记 -->
+
 <!-- 
 {% note info %}  {% endnote %} 
 default primary success info warning danger

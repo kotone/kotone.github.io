@@ -1,8 +1,8 @@
 ---
 title: 解析与过滤
 date: 2017-12-26 15:25:08
-categories: Python3
-tags: python3笔记
+categories: python3
+tags: python3
 ---
 {% note info %}
 Python3学习笔记-解析与过滤

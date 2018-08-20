@@ -1,8 +1,8 @@
 ---
 title: 序列元素排序统计
 date: 2018-01-05 17:06:48
-categories: Python3
-tags: python3笔记
+categories: python3
+tags: python3
 ---
 {% note info %}
 Python3学习笔记-序列元素排序统计

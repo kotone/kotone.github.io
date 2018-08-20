@@ -1,8 +1,8 @@
 ---
 title: html2canvas使用小结
 date: 2018-07-22
-tags: [笔记]
-categories: 前端
+tags: [html2canvas]
+categories: js插件
 songid: 
 photos: 
 ---
