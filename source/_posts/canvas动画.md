@@ -100,8 +100,8 @@ gif.play(function(canvas){
 play: function(options,Callback) {
   this.init()
   var loop = options.loop || false; // 循环
-  var isComplete = options.isComplete || function(){}; // 完成后的回调
-  var canvas = this.canvas
+  var isComplete = options.isComplete || function() {}; // 完成后的回调
+  var canvas = this.canvas;
   var self = this;
   
   this.tiemer = setInterval(function() {
@@ -109,11 +109,12 @@ play: function(options,Callback) {
     if (loop) {
       end ? self.startFrame++ : self.startFrame = 0
     } else {
-      end ? self.startFrame++ : self.stop() && isComplete()
+      end ? self.startFrame++ : self.stop() && isComplete();
     }
-    self.ctx.clearRect(0,0,self.width,self.height);
-    self.ctx.drawImage(self.imgObj[self.startFrame], 0, 0,self.width,self.height);
-  },this.frameRate)
+    self.ctx.clearRect(0, 0, self.width, self.height);
+    self.ctx.drawImage(self.imgObj[self.startFrame], 0, 0, self.width, self.height);
+  }, this.frameRate)
+
   Callback(canvas);
 },
 // 添加 stop 函数
@@ -138,14 +139,14 @@ gif.play({
 ```
 完整代码：
 ```js
-var DrawGif = function(imgArr,fps,width,height) {
+var DrawGif = function(imgArr, fps, width, height) {
   this.startFrame = 0;  //开始帧
   this.endFrame = imgArr.length-1;  //结束帧
   this.width = width;
   this.height = height;
   this.imgArr = imgArr;
   this.fps = fps;
-  this.frameRate = 1000/this.fps;
+  this.frameRate = 1000 / this.fps;
 }
 DrawGif.prototype = {
   init: function() {
@@ -164,10 +165,10 @@ DrawGif.prototype = {
     return this
     
   },
-  play: function(options,Callback) {
+  play: function(options, Callback) {
     this.init()
     var loop = options.loop || false; // 循环
-    var isComplete = options.isComplete || function(){}; // 完成后的回调
+    var isComplete = options.isComplete || function() {}; // 完成后的回调
     var canvas = this.canvas
     var self = this;
     
@@ -178,9 +179,10 @@ DrawGif.prototype = {
       } else {
         end ? self.startFrame++ : self.stop() && isComplete()
       }
-      self.ctx.clearRect(0,0,self.width,self.height);
-      self.ctx.drawImage(self.imgObj[self.startFrame], 0, 0,self.width,self.height);
-    },this.frameRate)
+      self.ctx.clearRect(0,0,self.width, self.height);
+      self.ctx.drawImage(self.imgObj[self.startFrame], 0, 0, self.width, self.height);
+    }, this.frameRate)
+
     Callback(canvas);
   },
   stop: function() {
