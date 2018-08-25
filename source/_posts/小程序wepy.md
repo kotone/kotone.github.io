@@ -8,7 +8,7 @@ tags: ['wepy', '微信小程序']
 songid:
 photos:
 ---
-{% note info %} 微信小程序及wepy使用-总结篇(不定期跟新) {% endnote %} 
+{% note info %} 微信小程序及wepy使用-总结篇(不定期更新) {% endnote %} 
 
 总结一些自己在开发小程序时觉得很有用，或者踩过的坑
 <!-- more -->
