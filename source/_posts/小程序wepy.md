@@ -65,4 +65,12 @@ this.intercept('request', {
 2. 如果要在 `web-view` 页面使用图片上传等功能, `input file` 在`chrome` 调试是完全没问题。可以是放到我们小程序页面，`ios10` 会出现小程序闪退，而`ios11` 则正常（安卓未作测试）。解决办法就是使用微信`js-sdk`。(2018-7)
 3. 向 `web-view` 传递参数时需要注意对带有中文，以及特殊符号的进行`encodeURIComponent` 编码处理
 
-### 后续待更
+### js-sdk 
+调用 `js-sdk` 的 `getLocalImgData` 方法需要注意的：
+1. `iOS` 系统里面得到的数据，类型为 `image/jgp` , 需要替换下
+```js
+localData = localData.replace('jgp', 'jpeg');
+```
+2. 安卓系统得到的数据，是没有 `data:image/jpeg;base64` 前缀的  
+
+使用 `window.__wxjs_is_wkwebview` 可以判断当前设备类型。
