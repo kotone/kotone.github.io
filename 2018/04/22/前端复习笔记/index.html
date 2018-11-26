@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/dog.ico?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="笔记,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="em….平时喜欢浏览掘金,github搜集记录了一些面试或者日常开发常见的知识点,文中会注明出处,可能会有疏忽露掉的地方。还望见谅。。。">
+<meta name="keywords" content="笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端复习笔记-1">
+<meta property="og:url" content="http://yoursite.com/2018/04/22/前端复习笔记/index.html">
+<meta property="og:site_name" content="chomusuke">
+<meta property="og:description" content="em….平时喜欢浏览掘金,github搜集记录了一些面试或者日常开发常见的知识点,文中会注明出处,可能会有疏忽露掉的地方。还望见谅。。。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-26T02:21:08.972Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端复习笔记-1">
+<meta name="twitter:description" content="em….平时喜欢浏览掘金,github搜集记录了一些面试或者日常开发常见的知识点,文中会注明出处,可能会有疏忽露掉的地方。还望见谅。。。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'kotone'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/04/22/前端复习笔记/">
+
+
+
+
+
+  <title>前端复习笔记-1 | chomusuke</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">chomusuke</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">骑着蜗牛追兔子...(ちくしょう！)</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/22/前端复习笔记/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="chomusuke">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="chomusuke">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">前端复习笔记-1</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-22T00:00:00+00:00">
+                2018-04-22
+              </time>
+            
+
+            
+
+            
+          </span>
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+        
+        <!--网易-->
+        
+        
+      </div></header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>em….平时喜欢浏览掘金,github搜集记录了一些面试或者日常开发常见的知识点,文中会注明出处,可能会有疏忽露掉的地方。还望见谅。。。  </p>
+<a id="more"></a>
+<h2 id="基本类型-引用类型-ES6新增类型"><a href="#基本类型-引用类型-ES6新增类型" class="headerlink" title="基本类型,引用类型,ES6新增类型"></a>基本类型,引用类型,ES6新增类型</h2><blockquote>
+<p>基本类型：<code>undefined,null,string,boolean,number</code><br>引用类型：<code>object</code><br>ES6 新增基本类型：<code>symbol</code><br>ES6 新增数据结构：<code>Set,Map</code>  </p>
+</blockquote>
+<p>基本类型和引用类型的区别： <a href="https://www.jianshu.com/p/6f3de7e9fc51" target="_blank" rel="noopener">https://www.jianshu.com/p/6f3de7e9fc51</a></p>
+<h2 id="call-apply-bind-new-Object-create"><a href="#call-apply-bind-new-Object-create" class="headerlink" title="call,apply,bind,new,Object.create"></a>call,apply,bind,new,Object.create</h2><h3 id="call-apply的实现"><a href="#call-apply的实现" class="headerlink" title="call,apply的实现"></a>call,apply的实现</h3><p>call 函数特点：</p>
+<ol>
+<li>改变this指向</li>
+<li>给定参数执行函数</li>
+<li>this 参数可以传 null，当为 null 的时候，视为指向 window</li>
+<li>函数是可以有返回值的</li>
+</ol>
+<p>模拟的步骤可以分为:</p>
+<ol>
+<li>将函数设为对象的属性</li>
+<li>执行该函数</li>
+<li>删除该函数  </li>
+</ol>
+<p>简单版：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype._call = <span class="function"><span class="keyword">function</span>(<span class="params">context</span>) </span>&#123;</span><br><span class="line">    context.fn = <span class="keyword">this</span>;</span><br><span class="line">    context.fn();</span><br><span class="line">    <span class="keyword">delete</span> context.fn;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>完整版：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype._call = <span class="function"><span class="keyword">function</span>(<span class="params">context</span>) </span>&#123;</span><br><span class="line">    context = context || <span class="built_in">window</span></span><br><span class="line">    context.fn = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">var</span> args = [];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>;i &lt; <span class="built_in">arguments</span>.length;i++)&#123;</span><br><span class="line">        args.push(<span class="string">'arguments['</span> + i + <span class="string">']'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> res = <span class="built_in">eval</span>(<span class="string">'context.fn('</span> + args + <span class="string">')'</span>)</span><br><span class="line">    <span class="keyword">delete</span> context.fn;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>ES6版：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype._call = <span class="function"><span class="keyword">function</span>(<span class="params">context, ...args</span>) </span>&#123;</span><br><span class="line">    context = context || <span class="built_in">window</span>;</span><br><span class="line">    context.__fn__ = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">let</span> res = context.__fn__(...args);</span><br><span class="line">    <span class="keyword">delete</span> context.__fn__;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>apply的实现<br>完整版：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype._apply = <span class="function"><span class="keyword">function</span>(<span class="params">context, arr</span>) </span>&#123;</span><br><span class="line">    context = context || <span class="built_in">window</span>;</span><br><span class="line">    context.fn = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">var</span> res;</span><br><span class="line">    <span class="keyword">if</span> (!arr) &#123;</span><br><span class="line">        res = context.fn();</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> agrs=[];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; arr.length;i++)&#123;</span><br><span class="line">            args.push(<span class="string">'arr['</span> + i + <span class="string">']'</span>)</span><br><span class="line">        &#125;</span><br><span class="line">        res = <span class="built_in">eval</span>(<span class="string">'context.fn('</span> + args + <span class="string">')'</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">delete</span> context.fn;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>ES6版：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype._apply = <span class="function"><span class="keyword">function</span>(<span class="params">context, arr</span>) </span>&#123;</span><br><span class="line">    context = context || <span class="built_in">window</span>;</span><br><span class="line">    context.fn = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">let</span> res = !arr ? context.fn() : context.fn(...arr);</span><br><span class="line">    <span class="keyword">delete</span> context.fn;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="bind-的实现"><a href="#bind-的实现" class="headerlink" title="bind 的实现"></a>bind 的实现</h3><p>bind的特点：</p>
+<ol>
+<li>返回一个函数</li>
+<li>可以传入参数</li>
+<li>函数有返回值</li>
+<li>bind 返回的函数作为构造函数的时候，bind 时指定的 this 值会失效，但传入的参数依然生效  </li>
+</ol>
+<p>简洁版：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype._bind = <span class="function"><span class="keyword">function</span>(<span class="params">context</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> self = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> self.apply(context)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>未实现构造函数版：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype._bind = <span class="function"><span class="keyword">function</span>(<span class="params">context</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> self = <span class="keyword">this</span>;</span><br><span class="line">    <span class="comment">//获取第二个参数到最后一个参数</span></span><br><span class="line">    <span class="keyword">var</span> args = [].slice.call(<span class="built_in">arguments</span>, <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="comment">// 获取bind返回函数传入的参数</span></span><br><span class="line">        <span class="keyword">var</span> bindArgs = [].slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">        <span class="keyword">return</span> self.apply(context, args.concat(bindArgs))</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>bind返回函数做为构造函数时：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> value = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">var</span> foo = &#123;</span><br><span class="line">    value: <span class="number">1</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params">name, age</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.habit = <span class="string">'shopping'</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.value,<span class="string">'this.value'</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(name,<span class="string">'name'</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(age,<span class="string">'age'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">bar.prototype.friend = <span class="string">'kevin'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> bindFoo = bar.bind(foo, <span class="string">'daisy'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> bindFoo(<span class="string">'18'</span>);</span><br><span class="line"><span class="comment">// undefined</span></span><br><span class="line"><span class="comment">// daisy</span></span><br><span class="line"><span class="comment">// 18</span></span><br><span class="line"><span class="built_in">console</span>.log(obj.habit);</span><br><span class="line"><span class="built_in">console</span>.log(obj.friend);</span><br><span class="line"><span class="comment">// shopping</span></span><br><span class="line"><span class="comment">// kevin</span></span><br></pre></td></tr></table></figure></p>
+<p>尽管在全局和 foo 中都声明了 value 值,bind 返回的函数 bindFoo 作为 构造函数时，<code>this.value</code> 为<code>undifined</code>,说明绑定的 this 失效了,但是obj 依然继承了<code>bar.prototype</code>上的属性。</p>
+<blockquote>
+<p>详细参考<a href="https://github.com/mqyqingfeng/Blog/issues/12" target="_blank" rel="noopener">https://github.com/mqyqingfeng/Blog/issues/12</a></p>
+</blockquote>
+<p>完整版：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Function</span>.prototype._bind = <span class="function"><span class="keyword">function</span>(<span class="params">context</span>) </span>&#123;</span><br><span class="line">    <span class="comment">//调用 bind 的不是函数 报错</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="keyword">this</span> !== <span class="string">"function"</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">"Function.prototype._bind - what is trying to be bound is not callable"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> self = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">var</span> args = [].slice.call(<span class="built_in">arguments</span>,<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">var</span> fBound = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> bindArgs = [].slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">        <span class="comment">// 当作为构造函数时 this 指向实例 fBound ,将绑定函数的 this 指向该实例，可以让实例获得来自绑定函数的值,</span></span><br><span class="line">        <span class="comment">// 以上面的是 demo 为例，如果改成 `this instanceof fBound ? null : context`，实例只是一个空对象，将 null 改成 this ，实例会具有 habit 属性</span></span><br><span class="line">        <span class="comment">// 当作为普通函数时，this 指向 window</span></span><br><span class="line">        <span class="keyword">return</span> self.apply(<span class="keyword">this</span> <span class="keyword">instanceof</span> fBound ? <span class="keyword">this</span> : context,args.concat(bindArgs));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 修改返回函数的 prototype 为绑定函数的 prototype，实例就可以继承绑定函数的原型中的值</span></span><br><span class="line">    <span class="keyword">var</span> fNOP = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">    fNOP.prototype = self.prototype;</span><br><span class="line">    fBound.prototype = <span class="keyword">new</span> fNOP();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 另一个写法</span></span><br><span class="line">    <span class="comment">//fBound.prototype = Object.create(self.prototype);</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> fBound;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Object-create"><a href="#Object-create" class="headerlink" title="Object.create"></a>Object.create</h3><p>Object.create() 的实现:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.create = <span class="function"><span class="keyword">function</span>(<span class="params">o</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">    f.prototype = o;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> f;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<h3 id="new-的模拟实现"><a href="#new-的模拟实现" class="headerlink" title="new 的模拟实现"></a>new 的模拟实现</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">objectFactory</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">  <span class="keyword">var</span> Constructor = args.shift();</span><br><span class="line">  <span class="keyword">var</span> instance = <span class="built_in">Object</span>.create(Constructor.prototype);</span><br><span class="line">  <span class="keyword">var</span> temp = Constructor.apply(instance, args);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> (<span class="keyword">typeof</span> temp === <span class="string">'object'</span> &amp;&amp; temp !== <span class="literal">null</span>) ? temp : instance;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="类型判断"><a href="#类型判断" class="headerlink" title="类型判断"></a>类型判断</h2><ol>
+<li><code>typeof</code> 能检测出基本类型(包括symbol)和Object</li>
+<li><code>Object.prototype.toString.call()</code> 更加具体</li>
+</ol>
+<h3 id="isType"><a href="#isType" class="headerlink" title="isType"></a>isType</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isType = <span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(obj).slice(<span class="number">8</span>,<span class="number">-1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="EmptyObject"><a href="#EmptyObject" class="headerlink" title="EmptyObject"></a>EmptyObject</h3><p>jQuery提供了 isEmptyObject 方法来判断是否是空对象：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isEmptyObject</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//typeof obj ==="object" 是否需要？</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> name <span class="keyword">in</span> obj)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="Window对象"><a href="#Window对象" class="headerlink" title="Window对象"></a>Window对象</h3><p>Window 对象作为客户端 JavaScript 的全局对象，它有一个 window 属性指向自身<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isWindow</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> obj != <span class="literal">null</span> &amp;&amp; obj === obj.window</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="isElement"><a href="#isElement" class="headerlink" title="isElement"></a>isElement</h3><p>判断对象是不是DOM元素<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">isElement = <span class="function"><span class="keyword">function</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> !!(obj &amp;&amp; obj.nodeType === <span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="数组去重-排序-深浅拷贝-乱序-最大-最小值-扁平化-查找指定元素-判断对象相等"><a href="#数组去重-排序-深浅拷贝-乱序-最大-最小值-扁平化-查找指定元素-判断对象相等" class="headerlink" title="数组去重,排序,深浅拷贝,乱序,最大/最小值,扁平化,查找指定元素,判断对象相等"></a>数组去重,排序,深浅拷贝,乱序,最大/最小值,扁平化,查找指定元素,判断对象相等</h2><h3 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h3><h4 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h4><blockquote>
+<p>对象和 <code>NaN</code> 不去重<br><code>indexOf</code> 底层还是使用 <code>===</code> 进行判断，因为 <code>NaN === NaN</code>的结果为 <code>false</code>，所以使用 <code>indexOf</code> 查找不到 <code>NaN</code> 元素  </p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="string">'1'</span>]</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> res = [];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; arr.length;i++)&#123;</span><br><span class="line">        <span class="keyword">var</span> current = arr[i];</span><br><span class="line">        <span class="keyword">if</span>(res.indexOf(current) === <span class="number">-1</span>)&#123;</span><br><span class="line">            res.push(current)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="增加拓展函数"><a href="#增加拓展函数" class="headerlink" title="增加拓展函数"></a>增加拓展函数</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr, fn</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> res = [];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; arr.length;i++)&#123;</span><br><span class="line">        <span class="keyword">var</span> current = arr[i],</span><br><span class="line">            computed = fn ? fn(current, i, arr) : current;</span><br><span class="line">        <span class="keyword">if</span>(res.indexOf(computed) === <span class="number">-1</span>)&#123;</span><br><span class="line">            res.push(computed)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h4><blockquote>
+<p>对象不去重, <code>NaN</code> 会被忽略掉  </p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> array.indexOf(item) == index;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Object键值对"><a href="#Object键值对" class="headerlink" title="Object键值对"></a>Object键值对</h4><blockquote>
+<p>全部都能去重  </p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> obj = &#123;&#125;;</span><br><span class="line">    <span class="keyword">return</span> arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> itemKey = <span class="keyword">typeof</span> item + <span class="built_in">JSON</span>.stringify(item);</span><br><span class="line">        <span class="keyword">return</span> obj.hasOwnProperty(itemKey) ? <span class="literal">false</span> : (obj[itemKey] = <span class="literal">true</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Set和Map-ES6"><a href="#Set和Map-ES6" class="headerlink" title="Set和Map(ES6)"></a>Set和Map(ES6)</h4><blockquote>
+<p>对象不去重 <code>NaN</code> 去重  </p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Set</span></span><br><span class="line"><span class="keyword">let</span> unique = <span class="function">(<span class="params">arr</span>) =&gt;</span> [...new <span class="built_in">Set</span>(arr)]</span><br><span class="line"><span class="comment">// Map</span></span><br><span class="line"><span class="keyword">let</span> unique = <span class="function">(<span class="params">arr</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> seen = <span class="keyword">new</span> <span class="built_in">Map</span>();</span><br><span class="line">    <span class="keyword">return</span> arr.filter(<span class="function">(<span class="params">item</span>) =&gt;</span> !seen.has(item) &amp;&amp; seen.set(item, <span class="literal">true</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="深浅拷贝"><a href="#深浅拷贝" class="headerlink" title="深浅拷贝"></a>深浅拷贝</h3><blockquote>
+<p>参考<a href="https://juejin.im/post/5acc7e606fb9a028c67609f7" target="_blank" rel="noopener">https://juejin.im/post/5acc7e606fb9a028c67609f7</a></p>
+</blockquote>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><blockquote>
+<p>参考 <a href="https://www.jianshu.com/p/8d30da8b832e" target="_blank" rel="noopener">https://www.jianshu.com/p/8d30da8b832e</a>  </p>
+</blockquote>
+<p>快速排序是处理大数据最快的排序算法之一：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">quickSort</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (arr.length == <span class="number">0</span>) <span class="keyword">return</span> [];</span><br><span class="line">    <span class="keyword">var</span> left = [],</span><br><span class="line">    	right = [],</span><br><span class="line">    	pivot = arr[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">		arr[i] &lt; pivot ? left.push(arr[i]) : right.push(arr[i])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> quickSort(left).concat(pivot, quickSort(right));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="乱序"><a href="#乱序" class="headerlink" title="乱序"></a>乱序</h3><h4 id="Math-random"><a href="#Math-random" class="headerlink" title="Math.random"></a>Math.random</h4><blockquote>
+<p>乱序的不彻底  </p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Math</span>.random() - <span class="number">0.5</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>Math.random() - 0.5 随机得到一个正数、负数或是 0，如果是正数则降序排列，如果是负数则升序排列，如果是 0 就不变，然后不断的升序或者降序，最终得到一个乱序的数组。</p>
+<h4 id="Fisher–Yates"><a href="#Fisher–Yates" class="headerlink" title="Fisher–Yates"></a>Fisher–Yates</h4><blockquote>
+<p>当前元素与数组中的一个随机元素交换  </p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">shuffle</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> l = arr.length, r;</span><br><span class="line">    <span class="keyword">while</span>(l)&#123;</span><br><span class="line">        r= <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * l--);</span><br><span class="line">        [arr[l], arr[r]] = [arr[r], arr[l]];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="sort-random-order"><a href="#sort-random-order" class="headerlink" title="sort(random order)"></a>sort(random order)</h4><blockquote>
+<p>用于整数  </p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">shuffle</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> _random = arr.map(<span class="built_in">Math</span>.random);</span><br><span class="line">    <span class="keyword">return</span> arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> _random[a] - _random[b]</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>参考：<a href="https://bost.ocks.org/mike/shuffle/compare.html" target="_blank" rel="noopener">https://bost.ocks.org/mike/shuffle/compare.html</a></p>
+<h3 id="最大-最小值"><a href="#最大-最小值" class="headerlink" title="最大/最小值"></a>最大/最小值</h3><p><code>Math.max()</code>返回一组数中的最大值，需要注意的是：</p>
+<ol>
+<li>如果有任一参数不能转化为数值，则结果为NaN。</li>
+<li>如果没有参数，结果为-Infinity(负无穷大)  </li>
+</ol>
+<h4 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ArrMax</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 未对数组内的值进行判断</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">1</span>;i &lt; arr.length;i++)&#123;</span><br><span class="line">        <span class="keyword">var</span> res = arr[<span class="number">0</span>];</span><br><span class="line">        res = <span class="built_in">Math</span>.max(res, arr[i])</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="ruduce"><a href="#ruduce" class="headerlink" title="ruduce"></a>ruduce</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ArrMax</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, next</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">Math</span>.max(prev, next)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="evel"><a href="#evel" class="headerlink" title="evel"></a>evel</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">21</span>, <span class="number">5</span>]</span><br><span class="line"><span class="keyword">var</span> max = <span class="built_in">eval</span>(<span class="string">"Math.max("</span> + arr + <span class="string">")"</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">21</span>, <span class="number">5</span>]</span><br><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, arr)</span><br></pre></td></tr></table></figure>
+<h4 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">21</span>, <span class="number">5</span>]</span><br><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max(...arr)</span><br></pre></td></tr></table></figure>
+<h3 id="扁平化"><a href="#扁平化" class="headerlink" title="扁平化"></a>扁平化</h3><p>数组的扁平化，就是将一个嵌套多层的数组转换为只有一层的数组</p>
+<h4 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString"></a>toString</h4><p>如果数组的元素都是<strong>数字</strong>/<strong>字符串</strong>，那么我们可以考虑使用 toString 方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// numbel</span></span><br><span class="line">arr.toString().split(<span class="string">','</span>).map(<span class="function"><span class="keyword">function</span>(<span class="params">item</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> +item;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// string</span></span><br><span class="line">arr.toString().split(<span class="string">','</span>);</span><br></pre></td></tr></table></figure></p>
+<h4 id="递归循环"><a href="#递归循环" class="headerlink" title="递归循环"></a>递归循环</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">flatten</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> res = [];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; arr.length;i++)&#123;</span><br><span class="line">        <span class="keyword">var</span> item = arr[i];</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">Array</span>.isArray(item)) &#123;</span><br><span class="line">            res = res.concat(flatten(item))</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            res.push(item)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="reduce"><a href="#reduce" class="headerlink" title="reduce"></a>reduce</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">flatten</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, next</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> prev.concat(<span class="built_in">Array</span>.isArray(next) ? flatten(next) : next);</span><br><span class="line">    &#125;, [])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="ES6-1"><a href="#ES6-1" class="headerlink" title="ES6"></a>ES6</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> flatten = <span class="function">(<span class="params">arr</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">while</span> (arr.some(<span class="function"><span class="params">item</span> =&gt;</span> <span class="built_in">Array</span>.isArray(item))) &#123;</span><br><span class="line">        arr = [].concat(...arr)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="查找数组中指定元素"><a href="#查找数组中指定元素" class="headerlink" title="查找数组中指定元素"></a>查找数组中指定元素</h3><p><code>findIndex()</code>(es6)方法返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">23</span>, <span class="number">34</span>, <span class="number">53</span>]</span><br><span class="line">arr.findIndex(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> item &gt; <span class="number">30</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//2</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="实现findIndex"><a href="#实现findIndex" class="headerlink" title="实现findIndex"></a>实现<code>findIndex</code></h4><p>遍历一遍，返回符合要求的值的下标<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">findIndex</span>(<span class="params">arr, fn, context</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i &lt; arr.length;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(fn.call(context, arr[i], i, arr)) <span class="keyword">return</span> i</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">23</span>, <span class="number">34</span>, <span class="number">53</span>]</span><br><span class="line">findIndex(arr, <span class="function"><span class="keyword">function</span>(<span class="params">item, index</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(item &gt; <span class="number">30</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h4 id="sortedIndex"><a href="#sortedIndex" class="headerlink" title="sortedIndex"></a>sortedIndex</h4><p>在一个排好序的数组中找到 value 对应的位置，保证插入数组后，依然保持有序的状态,<br>效果为：<br><code>sortedIndex([10, 20, 30], 25); // 2</code></p>
+<p>对于有序的数组，那我们就不需要遍历，大可以使用<a href="https://www.jianshu.com/p/6a4b7f261e99" target="_blank" rel="noopener">二分查找法</a>，确定值的位置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sortedIndex</span>(<span class="params">arr, tag</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> low = <span class="number">0</span>,high = arr.length;</span><br><span class="line">    <span class="keyword">while</span> (low &lt; high) &#123;</span><br><span class="line">        <span class="keyword">var</span> mid = <span class="built_in">Math</span>.floor((low + high) / <span class="number">2</span>);</span><br><span class="line">        <span class="keyword">if</span>(arr[mid] &lt; tag) low = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> high = mid;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 返回插入的位置</span></span><br><span class="line">    <span class="keyword">return</span> high;</span><br><span class="line">    <span class="comment">//直接插入，返回最后的结果</span></span><br><span class="line">    <span class="comment">//return arr.splice(high,0,tag) &amp;&amp; arr;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>拓展下上面的函数，使其支持包含对象的数组。支持按照对象中的键值查找<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//拓展 (未做对象判断,异常处理)</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sortedIndex</span>(<span class="params">arr, tag, key</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> low = <span class="number">0</span>, high = arr.length;</span><br><span class="line">    <span class="keyword">while</span>(low &lt; high)&#123;</span><br><span class="line">        <span class="keyword">var</span> mid = <span class="built_in">Math</span>.floor((low + high) / <span class="number">2</span>), arr_mid, _tag;</span><br><span class="line">		arr_mid = key ? arr[mid][key] : arr[mid];</span><br><span class="line">		_tag = key ? tag[key] : tag;</span><br><span class="line">        <span class="keyword">if</span> (arr_mid &lt; _tag) low = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> high = mid;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 返回插入的位置</span></span><br><span class="line">    <span class="keyword">return</span> high;</span><br><span class="line">    <span class="comment">//直接插入，返回最后的结果</span></span><br><span class="line">    <span class="comment">//return arr.splice(high, 0, tag) &amp;&amp; arr;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> test = [&#123;<span class="attr">name</span>: <span class="string">'test1'</span>, <span class="attr">age</span>: <span class="number">10</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">'test2'</span>, <span class="attr">age</span>: <span class="number">30</span>&#125;];</span><br><span class="line">sortedIndex(test, &#123;<span class="attr">name</span>: <span class="string">'test3'</span>, <span class="attr">age</span>: <span class="number">20</span>&#125;, <span class="string">'name'</span>); <span class="comment">//2</span></span><br><span class="line">sortedIndex([<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>], <span class="number">35</span>)<span class="comment">//3</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>本节参考：<a href="https://github.com/mqyqingfeng/Blog/issues/37" target="_blank" rel="noopener">https://github.com/mqyqingfeng/Blog/issues/37</a></p>
+</blockquote>
+<h3 id="判断对象相等"><a href="#判断对象相等" class="headerlink" title="判断对象相等"></a>判断对象相等</h3><p>简单版：JSON.stringify(obj)</p>
+<h2 id="函数闭包-柯里化-尾调用-递归"><a href="#函数闭包-柯里化-尾调用-递归" class="headerlink" title="函数闭包,柯里化,尾调用,递归"></a>函数闭包,柯里化,尾调用,递归</h2><h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><blockquote>
+<p>参考：<a href="https://juejin.im/post/58cf180b0ce4630057d6727c" target="_blank" rel="noopener">https://juejin.im/post/58cf180b0ce4630057d6727c</a>  </p>
+</blockquote>
+<p>文中拓展：<code>promise</code>及<code>async await</code></p>
+<h3 id="尾调用-递归"><a href="#尾调用-递归" class="headerlink" title="尾调用,递归"></a>尾调用,递归</h3><blockquote>
+<p>参考 <a href="https://juejin.im/post/5acdd7486fb9a028ca53547c" target="_blank" rel="noopener">https://juejin.im/post/5acdd7486fb9a028ca53547c</a>  </p>
+</blockquote>
+<h3 id="函数柯里化"><a href="#函数柯里化" class="headerlink" title="函数柯里化"></a>函数柯里化</h3><p>ES6的写法比较好懂，而且简短<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> curry = <span class="function">(<span class="params">fn, ...args</span>) =&gt;</span> fn.length &lt;= args.length</span><br><span class="line">            ? fn(...args)</span><br><span class="line">            : curry.bind(<span class="literal">null</span>, fn, ...args)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> test = curry(<span class="function"><span class="keyword">function</span>(<span class="params">a, b, c</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log([a, b, c])</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h2 id="防抖-节流-懒加载-预加载"><a href="#防抖-节流-懒加载-预加载" class="headerlink" title="防抖,节流,懒加载,预加载"></a>防抖,节流,懒加载,预加载</h2><h3 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">debounce</span>(<span class="params">func, wait</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> timeout;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> context = <span class="keyword">this</span>;</span><br><span class="line">        <span class="keyword">var</span> args = <span class="built_in">arguments</span>;</span><br><span class="line"></span><br><span class="line">        clearTimeout(timeout)</span><br><span class="line">        timeout = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            func.apply(context, args)</span><br><span class="line">        &#125;, wait);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">func, wait</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> timeout;</span><br><span class="line">    <span class="keyword">var</span> previous = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        context = <span class="keyword">this</span>;</span><br><span class="line">        args = <span class="built_in">arguments</span>;</span><br><span class="line">        <span class="keyword">if</span> (!timeout) &#123;</span><br><span class="line">            timeout = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">                timeout = <span class="literal">null</span>;</span><br><span class="line">                func.apply(context, args)</span><br><span class="line">            &#125;, wait)</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>防抖和节流的区分：<br>防抖是虽然事件持续触发，但只有等事件停止触发后 n 秒才执行函数，节流是持续触发的时候，每 n 秒执行一次函数</p>
+<blockquote>
+<p>详细参考：<a href="https://github.com/mqyqingfeng/Blog/issues/26" target="_blank" rel="noopener">https://github.com/mqyqingfeng/Blog/issues/26</a></p>
+</blockquote>
+<h2 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h2><blockquote>
+<p>参考：<a href="https://juejin.im/post/58f558efac502e006c3e5c97" target="_blank" rel="noopener">https://juejin.im/post/58f558efac502e006c3e5c97</a>   </p>
+</blockquote>
+<p>文中拓展：<code>requestAnimationFrame</code>  、 <code>DocumentFragment</code></p>
+<h2 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h2><blockquote>
+<p><a href="http://es6.ruanyifeng.com/#docs/promise" target="_blank" rel="noopener">http://es6.ruanyifeng.com/#docs/promise</a><br><a href="http://www.cnblogs.com/lunlunshiwo/p/8852984.html" target="_blank" rel="noopener">http://www.cnblogs.com/lunlunshiwo/p/8852984.html</a>   </p>
+</blockquote>
+<p>Promise的内部，有一个状态管理器的存在，有三种状态：pending、fulfilled、rejected。</p>
+<ol>
+<li>promise 对象初始化状态为 pending。</li>
+<li>当调用resolve(成功)，会由pending =&gt; fulfilled。</li>
+<li>当调用reject(失败)，会由pending =&gt; rejected。  </li>
+</ol>
+<p>注意promsie状态 只能由 pending =&gt; fulfilled/rejected, 一旦修改就不能再变</p>
+<p>ES7 <code>async/await</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> res = <span class="keyword">await</span> func()</span><br><span class="line"><span class="comment">//等价于</span></span><br><span class="line">func().then(<span class="function"><span class="params">res</span> =&gt;</span>&#123;</span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> resolve(<span class="number">1</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>结合使用<code>fetch</code>,<code>async/await</code>获取用户数据：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">getUserByAsync</span>(<span class="params">url,method = <span class="string">'json'</span>,option</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> result = <span class="keyword">await</span> fetch(url,option);</span><br><span class="line">    <span class="comment">// fetch 请求错误并不会报错，所以要根据status判断是否请求成功</span></span><br><span class="line">    <span class="keyword">if</span>(result.status) <span class="keyword">return</span> result[method]();</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'error'</span>)</span><br><span class="line">&#125;</span><br><span class="line">getUserByAsync(<span class="string">'https://api.github.com/users/你的账户'</span>)</span><br><span class="line">    .then(<span class="function"><span class="params">res</span> =&gt;</span> getUserByAsync(<span class="string">'https://api.github.com/users/另一个请求'</span>, <span class="string">'text'</span>))</span><br><span class="line">    .then(<span class="function"><span class="params">res</span> =&gt;</span> <span class="built_in">console</span>.log(res))</span><br><span class="line">    .catch(<span class="function"><span class="params">err</span> =&gt;</span> <span class="built_in">console</span>.log(err))</span><br></pre></td></tr></table></figure></p>
+<h2 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h2><p>除了XMLHttpRequest对象来获取后台的数据之外，还可以使用一种更优的解决方案fetch。</p>
+<blockquote>
+<p>参考：<a href="https://segmentfault.com/a/1190000011433064" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011433064</a></p>
+</blockquote>
+<h2 id="tcp-http"><a href="#tcp-http" class="headerlink" title="tcp/http"></a>tcp/http</h2><blockquote>
+<p>参考：<a href="https://juejin.im/post/5ad4094e6fb9a028d7011069" target="_blank" rel="noopener">https://juejin.im/post/5ad4094e6fb9a028d7011069</a></p>
+</blockquote>
+<h2 id="Cookie、session和Web-Storage"><a href="#Cookie、session和Web-Storage" class="headerlink" title="Cookie、session和Web Storage"></a>Cookie、session和Web Storage</h2><blockquote>
+<p>参考地址：<a href="https://juejin.im/post/5ad5b9116fb9a028e014fb19" target="_blank" rel="noopener">https://juejin.im/post/5ad5b9116fb9a028e014fb19</a></p>
+</blockquote>
+<h2 id="vue"><a href="#vue" class="headerlink" title="vue　"></a>vue　</h2><h3 id="MVVM原理以及实现"><a href="#MVVM原理以及实现" class="headerlink" title="MVVM原理以及实现"></a>MVVM原理以及实现</h3><p>参考：  </p>
+<blockquote>
+<ol>
+<li><a href="https://juejin.im/post/5abdd6f6f265da23793c4458" target="_blank" rel="noopener">https://juejin.im/post/5abdd6f6f265da23793c4458</a></li>
+<li><a href="https://github.com/DMQ/mvvm/blob/master/readme.md" target="_blank" rel="noopener">https://github.com/DMQ/mvvm/blob/master/readme.md</a></li>
+</ol>
+</blockquote>
+<h2 id="看不懂系列"><a href="#看不懂系列" class="headerlink" title="看不懂系列"></a>看不懂系列</h2><ol>
+<li>深度剖析：如何实现一个 Virtual DOM 算法<br><a href="https://github.com/livoras/blog/issues/13" target="_blank" rel="noopener">https://github.com/livoras/blog/issues/13</a></li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/笔记/" rel="tag"># 笔记</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/08/python—自定义迭代对象/" rel="next" title="自定义可迭代对象">
+                <i class="fa fa-chevron-left"></i> 自定义可迭代对象
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/22/html2canvas使用小结/" rel="prev" title="html2canvas使用小结">
+                html2canvas使用小结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+
+
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="chomusuke">
+            
+              <p class="site-author-name" itemprop="name">chomusuke</p>
+              <p class="site-description motion-element" itemprop="description">前端开发@野生无公害,放心食用</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+
+          <!--网易-->
+         
+          <div class="mianMusic">
+              <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=37169617&auto=0&height=66"></iframe>
+          </div>
+          
+          
+        </div>
+      </section>
+      
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本类型-引用类型-ES6新增类型"><span class="nav-number">1.</span> <span class="nav-text">基本类型,引用类型,ES6新增类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#call-apply-bind-new-Object-create"><span class="nav-number">2.</span> <span class="nav-text">call,apply,bind,new,Object.create</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#call-apply的实现"><span class="nav-number">2.1.</span> <span class="nav-text">call,apply的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bind-的实现"><span class="nav-number">2.2.</span> <span class="nav-text">bind 的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-create"><span class="nav-number">2.3.</span> <span class="nav-text">Object.create</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#new-的模拟实现"><span class="nav-number">2.4.</span> <span class="nav-text">new 的模拟实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型判断"><span class="nav-number">3.</span> <span class="nav-text">类型判断</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#isType"><span class="nav-number">3.1.</span> <span class="nav-text">isType</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EmptyObject"><span class="nav-number">3.2.</span> <span class="nav-text">EmptyObject</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Window对象"><span class="nav-number">3.3.</span> <span class="nav-text">Window对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#isElement"><span class="nav-number">3.4.</span> <span class="nav-text">isElement</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组去重-排序-深浅拷贝-乱序-最大-最小值-扁平化-查找指定元素-判断对象相等"><span class="nav-number">4.</span> <span class="nav-text">数组去重,排序,深浅拷贝,乱序,最大/最小值,扁平化,查找指定元素,判断对象相等</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组去重"><span class="nav-number">4.1.</span> <span class="nav-text">数组去重</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#indexOf"><span class="nav-number">4.1.1.</span> <span class="nav-text">indexOf</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#增加拓展函数"><span class="nav-number">4.1.2.</span> <span class="nav-text">增加拓展函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#filter"><span class="nav-number">4.1.3.</span> <span class="nav-text">filter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Object键值对"><span class="nav-number">4.1.4.</span> <span class="nav-text">Object键值对</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Set和Map-ES6"><span class="nav-number">4.1.5.</span> <span class="nav-text">Set和Map(ES6)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#深浅拷贝"><span class="nav-number">4.2.</span> <span class="nav-text">深浅拷贝</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-number">4.3.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#乱序"><span class="nav-number">4.4.</span> <span class="nav-text">乱序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Math-random"><span class="nav-number">4.4.1.</span> <span class="nav-text">Math.random</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Fisher–Yates"><span class="nav-number">4.4.2.</span> <span class="nav-text">Fisher–Yates</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sort-random-order"><span class="nav-number">4.4.3.</span> <span class="nav-text">sort(random order)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最大-最小值"><span class="nav-number">4.5.</span> <span class="nav-text">最大/最小值</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#for循环"><span class="nav-number">4.5.1.</span> <span class="nav-text">for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ruduce"><span class="nav-number">4.5.2.</span> <span class="nav-text">ruduce</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#evel"><span class="nav-number">4.5.3.</span> <span class="nav-text">evel</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#apply"><span class="nav-number">4.5.4.</span> <span class="nav-text">apply</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ES6"><span class="nav-number">4.5.5.</span> <span class="nav-text">ES6</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扁平化"><span class="nav-number">4.6.</span> <span class="nav-text">扁平化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#toString-NaN"><span class="nav-number">4.6.1.</span> <span class="nav-text">toString</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#递归循环"><span class="nav-number">4.6.2.</span> <span class="nav-text">递归循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#reduce"><span class="nav-number">4.6.3.</span> <span class="nav-text">reduce</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ES6-1"><span class="nav-number">4.6.4.</span> <span class="nav-text">ES6</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查找数组中指定元素"><span class="nav-number">4.7.</span> <span class="nav-text">查找数组中指定元素</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#实现findIndex"><span class="nav-number">4.7.1.</span> <span class="nav-text">实现findIndex</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#sortedIndex"><span class="nav-number">4.7.2.</span> <span class="nav-text">sortedIndex</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断对象相等"><span class="nav-number">4.8.</span> <span class="nav-text">判断对象相等</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数闭包-柯里化-尾调用-递归"><span class="nav-number">5.</span> <span class="nav-text">函数闭包,柯里化,尾调用,递归</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包"><span class="nav-number">5.1.</span> <span class="nav-text">闭包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#尾调用-递归"><span class="nav-number">5.2.</span> <span class="nav-text">尾调用,递归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数柯里化"><span class="nav-number">5.3.</span> <span class="nav-text">函数柯里化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#防抖-节流-懒加载-预加载"><span class="nav-number">6.</span> <span class="nav-text">防抖,节流,懒加载,预加载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#防抖"><span class="nav-number">6.1.</span> <span class="nav-text">防抖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#节流"><span class="nav-number">6.2.</span> <span class="nav-text">节流</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件委托"><span class="nav-number">7.</span> <span class="nav-text">事件委托</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise"><span class="nav-number">8.</span> <span class="nav-text">Promise</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fetch"><span class="nav-number">9.</span> <span class="nav-text">fetch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tcp-http"><span class="nav-number">10.</span> <span class="nav-text">tcp/http</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cookie、session和Web-Storage"><span class="nav-number">11.</span> <span class="nav-text">Cookie、session和Web Storage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue"><span class="nav-number">12.</span> <span class="nav-text">vue　</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MVVM原理以及实现"><span class="nav-number">12.1.</span> <span class="nav-text">MVVM原理以及实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#看不懂系列"><span class="nav-number">13.</span> <span class="nav-text">看不懂系列</span></a></li></ol></div>
+            
+
+            <!--文章目录-->
+
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">chomusuke</span>
+
+  
+  
+  <div class="powered-by">
+  <i class="fa fa-eye"></i>
+  <span id="busuanzi_container_site_uv">
+  <span id="busuanzi_value_site_uv"></span>
+  </span>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
